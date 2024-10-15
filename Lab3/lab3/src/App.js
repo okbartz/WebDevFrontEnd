@@ -1,4 +1,6 @@
 import React from 'react'; 
+import "leaflet/dist/leaflet.css";  
+
 //import FoodItem from "./components/FoodItem"
 import DisplayFoodItems from "./components/DisplayFoodItems"
 import { items } from "./components/data/data.js";
