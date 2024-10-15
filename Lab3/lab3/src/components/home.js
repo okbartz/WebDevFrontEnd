@@ -2,6 +2,7 @@ import DisplayFoodItems from "./DisplayFoodItems"
 import Info from "./Info.js"
 import Map from "./Map.js"
 import { items } from "./data/data.js";
+import Search from "./Search"
 import React from "react";
 
 
@@ -29,7 +30,8 @@ const Homelayout = () => {
             <div className="col">
             
             <h3>Explore our menu</h3>
-            <DisplayFoodItems foodList={items} />
+            <Search details={items}/>
+            {/* <DisplayFoodItems foodList={items} /> */}
             
             </div>
         </div> 
