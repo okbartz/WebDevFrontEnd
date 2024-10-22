@@ -1,24 +1,23 @@
-import React from 'react'; 
-//import FoodItem from "./components/FoodItem"
-import DisplayFoodItems from "./components/DisplayFoodItems"
-import { items } from "./components/data/data.js";
-import Homelayout from "./components/home.js";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "leaflet/dist/leaflet.css";
+import People from "./components/People"
 
-console.log({items})
-function App() {       return ( 
-       <div>
-        {/* <h1>Explore our menu</h1> */}
-
-        {/* {items.map((food, index) => {
-        return <FoodItem food={food} key={index} />;
-      })} */}
-
-      {/* <DisplayFoodItems foodList={items} /> */}
-
-      <Homelayout/>
-
-
-       </div>
-      );    
- } 
-export default App; 
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route path="/" element={<Home />} />
+        <Route path="aboutus" element= {<People/>}>
+        <Route path=":personId" element={<Person staff={staff} />} />
+        </Route>
+        </Route>
+        <Route path="*" element={<NoPage />} /> 
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;
