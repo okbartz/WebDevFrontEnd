@@ -1,0 +1,14 @@
+.map {
+    height: 100vh;
+  }
+
+  .popup {
+    background-color: #9382fe;
+    color:rgb(247, 247, 251);
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+  }
+  

@@ -1,9 +1,11 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "leaflet/dist/leaflet.css";
 import People from "./components/People"
+import Home from "./components/home.js";
+
 
 function App() {
   return (

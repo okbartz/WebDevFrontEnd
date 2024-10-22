@@ -20,13 +20,27 @@ const Homelayout = () => {
             <Info/>
             
             
+            <div className="row">
+
+              <div className="col">
+                  <h3>Where we are...</h3>
+                  
+                  <Map/>
+                  
+                  </div>
+                
+              </div>
+
+
             </div>
-            <div className="col">
+            {/* <div className="col">
             <h3>Where we are...</h3>
             
             <Map/>
             
-            </div>
+            </div> */}
+
+
             <div className="col">
             
             <h3>Explore our menu</h3>
