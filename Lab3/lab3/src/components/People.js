@@ -1,5 +1,5 @@
 import React from "react";
-import{staff} from '../data/staff';
+import{staff} from './data/staff';
 
 const People = () => {
   return (

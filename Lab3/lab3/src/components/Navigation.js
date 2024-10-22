@@ -1,18 +1,26 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
+
 const Navigation = () => {
   return (
     <>
-      <nav>
-        <Link to="/">
-          Home
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      
+      <div class="collapse navbar-collapse me-auto" id="navbarNav">
+        
+        <Link class="nav-item nav-link p-1" to="/">
+        Home
         </Link>
-        <Link to="aboutus">
+        
+        <Link class="nav-item nav-link p-1" to="aboutus">
           About Us
         </Link>
+        </div>
       </nav>
       <Outlet />
+      
     </>
   );
 };
