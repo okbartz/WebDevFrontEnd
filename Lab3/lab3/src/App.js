@@ -9,6 +9,9 @@ import Navigation from "./components/Navigation";
 import NoPage from "./components/NoPage";
 import{staff} from './components/data/staff';
 
+import Placeholder from "./components/Placeholder.js";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +22,7 @@ function App() {
             <Route path=":personId" element={<Person staff={staff} />} />
           </Route>
           <Route path="*" element={<NoPage />} />
+          <Route path="/placeholder" element={<Placeholder />} />
         </Route>
       </Routes>
     </BrowserRouter>

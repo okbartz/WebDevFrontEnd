@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 
+
 const Navigation = () => {
   return (
     <>
@@ -16,6 +17,10 @@ const Navigation = () => {
         
         <Link class="nav-item nav-link p-1" to="aboutus">
           About Us
+        </Link>
+
+        <Link class="nav-item nav-link p-1" to="placeholder">
+          Contact Us
         </Link>
         </div>
       </nav>
