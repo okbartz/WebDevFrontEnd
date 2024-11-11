@@ -9,10 +9,12 @@ import Navigation from "./components/Navigation";
 import NoPage from "./components/NoPage";
 import{staff} from './components/data/staff';
 
+import DisplayFoodMenu from "./components/DisplayFoodMenu";
+
 import Placeholder from "./components/Placeholder.js";
 
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -22,10 +24,12 @@ export default function App() {
             <Route path=":personId" element={<Person staff={staff} />} />
           </Route>
           <Route path="*" element={<NoPage />} />
-          <Route path="/placeholder" element={<Placeholder />} />
+          <Route path="/order" element={<DisplayFoodMenu />} />
+          <Route path="*" element={<NoPage />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
+export default App;
