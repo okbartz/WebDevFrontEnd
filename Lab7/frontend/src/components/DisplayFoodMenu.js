@@ -4,7 +4,7 @@ import FoodOrder from "./FoodOrder"
 
 const DisplayFoodMenu = () => {
   const {status, foods} = useFetchData();
-  if (status==='fetched')
+  if (status==='fetched') 
   return (
     <div>
     <FoodOrder items={foods} /> 

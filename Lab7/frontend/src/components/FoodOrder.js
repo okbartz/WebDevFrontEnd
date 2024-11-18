@@ -8,29 +8,31 @@ const FoodOrder = ({ items }) => {
   const handleClick = (e, selectedItem) => {
     let newState = [...selectedItems, selectedItem];
     setSelectedItems(newState);
+    console.log(selectedItems);
   };
   return (
     <>
       <div className="container-fluid">
-        <div>
-          <h2>Menu</h2>
-          <ul>
-            {items.map((item) => (
-              <li key={item.id} onClick={(e) => handleClick(e, item.name)}>
-                {item.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <OrderContext.Provider value={[selectedItems, setSelectedItems]}>
-          <div>
- 		<OrderSummary />
+        <div className="row">
+          <div className="col-3 submenu ">
+            <h2 className=" justify-content-left headingStyleLeft">Menu</h2>
+            <ul className="list-group">
+              {items.map((item) => (
+                <li className="menu-list list-group-item" key={item.id} onClick={(e) => handleClick(e, item.name)}>
+                  {item.name}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="col-5">
+          <OrderContext.Provider value={[selectedItems, setSelectedItems]}>
+            <div className="col-3">
+              <OrderSummary />
+            </div>
+            <div className="col-5">
               <SubmitOrder />
             </div>
-</OrderContext.Provider>
-
+          </OrderContext.Provider>
+        </div>
       </div>
     </>
   );

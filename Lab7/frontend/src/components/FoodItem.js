@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion';
-
+import Stars from "./stars";
 
 
 const FoodItem = ({ food }) => {
@@ -10,6 +10,7 @@ const FoodItem = ({ food }) => {
         <Accordion.Body>
           <p>{food.description}</p>
           <p>£{food.price}</p>
+          <Stars position={index} />
         </Accordion.Body>
       </div>
     );

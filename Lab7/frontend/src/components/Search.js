@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 // import FoodMenu from "./FoodMenu"
-import DisplayFoodItems from "./DisplayFoodItems";
-
+import StyledFoodMenu from "./StyledFoodMenu"
 
 function Search({ foods }) {
    const [searchField, setSearchField] = useState("");
@@ -20,7 +19,7 @@ function Search({ foods }) {
               onChange={(e) =>  setSearchField(e.target.value)}
             />
           </div>
-          <DisplayFoodItems foods={filtered} />
+          <StyledFoodMenu foods={filtered} />
       </div>
   
   );
