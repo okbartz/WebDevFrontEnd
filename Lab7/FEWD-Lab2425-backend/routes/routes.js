@@ -7,10 +7,15 @@ router.get("/", controller.listMenu);
 router.get("/food", controller.listMenu);
 router.post("/addOrder", controller.addOrder);
 router.get("/new", controller.newList);
-router.get("/viewOrders", controller.listOrders);
+router.get(
+  "/viewOrders",
+  // passport.authenticate("jwt", { session: false }),
+  controller.listOrders
+);
+
 router.get(
   "/appData",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   controller.displayAppData
 );
 router.post("/login", controller.processLogin)

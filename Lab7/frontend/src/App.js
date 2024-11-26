@@ -7,6 +7,7 @@ import People from "./components/People";
 import Person from "./components/Person";
 import Navigation from "./components/Navigation";
 import NoPage from "./components/NoPage";
+import StaffPage from "./components/StaffPage.js";
 import{staff} from './components/data/staff';
 
 import DisplayFoodMenu from "./components/DisplayFoodMenu";
@@ -26,6 +27,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="/order" element={<DisplayFoodMenu />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="/staff" element={<StaffPage />} />
 
         </Route>
       </Routes>
